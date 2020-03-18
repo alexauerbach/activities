@@ -1,0 +1,38 @@
+package structureSwitchCase;
+
+import java.util.Scanner;
+
+public class ActivitiesSwitchCase {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print(" Escolha um número entre 1 e 7 (ele representará um dia da semana): ");
+		int nChosen = sc.nextInt();
+		
+		String textInIf = (" Você escolheu " + nChosen + ", referente à:");
+		
+		if(nChosen == 1) {
+			System.out.printf("%s DOMINGO.%n", textInIf);
+		}else if(nChosen == 2) {
+			System.out.printf("%s SEGUNDA-FEIRA.%n", textInIf);
+		}else if(nChosen == 3) {
+			System.out.printf("%s TERÇA-FEIRA.%n", textInIf);
+		}else if(nChosen == 4) {
+			System.out.printf("%s QUARTA-FEIRA.%n", textInIf);
+		}else if(nChosen == 5) {
+			System.out.printf("%s QUINTA-FEIRA.%n", textInIf);
+		}else if(nChosen == 6) {
+			System.out.printf("%s SEXTA-FEIRA.%n", textInIf);
+		}else if(nChosen == 7) {
+			System.out.printf("%s SÁBADO.%n", textInIf);
+		}else{
+			System.out.printf(" Infelizmente você digitou um número inválido.");
+		}	
+		
+		sc.close();
+		
+	}
+	
+}
