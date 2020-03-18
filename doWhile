@@ -1,0 +1,63 @@
+package structureDoWhile;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc =new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		int n;
+		do {
+			System.out.println(" Conversor de temperatura. ");
+			System.out.println(" Escolha conforme as opções abaixo:"); 
+			System.out.println(" [1] - Graus Celcius para Fahrenheit. ");
+			System.out.println(" [2] - Graus Fahrenheit para Celcius. ");
+			n = sc.nextInt();
+			System.out.println();
+			
+			do {
+				if(n == 1) {
+					System.out.print(" Quantos Graus Celsius quer converter? ");
+					double c = sc.nextInt();
+					double f = c * 1.8 + 32;
+					System.out.printf(" A temperatura em Graus Fahrenheit é: %.1f. %n", f);
+				}else if(n == 2) {
+					System.out.print(" Quantos Graus Fahrenheit quer converter? ");
+					double f = sc.nextInt();
+					double c = (f - 32) / 1.8;
+					System.out.printf(" A temperatura em Graus Celsius é: %.1f. %n", c);
+				}else {
+					System.out.println(" Comando não encontrado. ");
+				}
+				
+				do {
+					System.out.printf("%n Deseja fazer uma nova conversão? %n");
+					System.out.println(" [1] - Sim. ");
+					System.out.println(" [2] - Não. ");
+					n = sc.nextInt();
+					System.out.println();
+					
+					if(n != 1 && n != 2) {
+						System.out.println(" Código invalido! ");
+					}
+				}while(n == 1 && n == 2);
+				
+			}while (n != 2);
+		
+			System.out.println(" Escolha uma das seguintes opções: ");
+			System.out.println(" [1] - Finalizar excecução. ");
+			System.out.println(" [2] - Recomeçar o conversor. ");
+			n = sc.nextInt();
+			System.out.println();	
+		}while(n != 1);	
+			
+		System.out.println("Excecuão Finalizada. ");
+		
+		sc.close();
+		
+	}
+}
