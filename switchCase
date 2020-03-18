@@ -2,7 +2,7 @@ package structureSwitchCase;
 
 import java.util.Scanner;
 
-public class ActivitiesSwitchCase {
+public class Main{
 	
 	public static void main(String[] args) {
 		
